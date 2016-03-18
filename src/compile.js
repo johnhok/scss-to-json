@@ -13,11 +13,7 @@ function unwrapValue(value) {
 
 var Compile = {
   fromString: function(value) {
-    var wrappedValue = wrapValue(value);
-    var s = sass.renderSync({ data: wrappedValue });
-    var compiled = String(s.css);
-    var minifiedCompiled = cssmin(compiled);
-    return unwrapValue(minifiedCompiled);
+      return value;
   }
 };
 
