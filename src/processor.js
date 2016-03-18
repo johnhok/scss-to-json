@@ -5,7 +5,7 @@ var Declaration = require('./declaration');
 var DeclarationStore = require('./declarationStore');
 var utilities = require('./utilities');
 
-var LINE_DELIMITER = '\n';
+var LINE_DELIMITER = ';';
 var COMMENT_DELIMETER = '//';
 var EMPTY_LINES = ['', '\n', '\s'];
 
