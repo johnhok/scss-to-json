@@ -24,7 +24,7 @@ var Utilities = {
     }
 
     return transformedValue;
-},
+  },
 
   removeComments: function (value) {
     var transformedValue = value;
