@@ -1,5 +1,7 @@
 'use strict';
 
+var stripCssComments = require('strip-css-comments');
+
 var Utilities = {
   stripNewLinesAndSemicolons: function(scssString) {
     return scssString.replace(/\n/g, '').replace(/\;/g, '');
@@ -20,6 +22,13 @@ var Utilities = {
     if (commentIndex > -1) {
       transformedValue = transformedValue.substring(0, commentIndex);
     }
+
+    return transformedValue;
+},
+
+  removeComments: function (value) {
+    var transformedValue = value;
+    transformedValue = stripCssComments(value);
 
     return transformedValue;
   }
