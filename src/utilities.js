@@ -24,7 +24,7 @@ var Utilities = {
 
   removeComments: function (value) {
     var transformedValue = value;
-    transformedValue = this.removeInlineComments(transformedValue);
+    transformedValue = this.removeInlineComments(transformedValue).trim();
     transformedValue = stripCssComments(value);
 
     return transformedValue;

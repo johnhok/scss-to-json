@@ -74,8 +74,8 @@ function hasDependencies(options) {
 }
 
 function normalizeLines(line) {
-  var stripped = utilities.stripNewLinesAndSemicolons(line);
-  stripped = utilities.removeComments(stripped);
+  var stripped = utilities.removeComments(stripped);
+  stripped = utilities.stripNewLinesAndSemicolons(line);
   
   return stripped.trim();
 }
