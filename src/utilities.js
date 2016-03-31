@@ -17,11 +17,7 @@ var Utilities = {
 
   removeInlineComments: function(value) {
     var transformedValue = value;
-    var commentIndex = value.indexOf('//');
-
-    if (commentIndex > -1) {
-      transformedValue = transformedValue.substring(0, commentIndex);
-    }
+    transformedValue = value.replace(/^\/\/.*$/mg, '');
 
     return transformedValue;
   },
